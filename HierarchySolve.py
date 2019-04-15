@@ -1,5 +1,6 @@
 from collections import namedtuple, defaultdict
-from sys import stdout
+from sys import stdout, argv
+
 
 Employee = namedtuple(
     "Employee", ("id", "first_name", "last_name", "manager_id"))
@@ -54,3 +55,12 @@ class Hierarchy:
         # print("run")
         # hierarchy = Hierarchy()
         # hierarchy.process_hierarchy()
+
+
+if __name__ == '__main__':
+    try:
+        path = argv[1]
+    except IndexError:
+        path = "employees.txt"
+    h = Hierarchy(path)
+    h.print_hierarchy()
