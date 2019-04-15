@@ -19,12 +19,7 @@ class Hierarchy:
                 self.parse_employee(line)
 
     def parse_employee(self, line):
-
         parsed = line.strip().split("\t")
-        # print("--------------")
-        # print(line)
-        # print(len(parsed))
-        # print(parsed)
         if (len(parsed) == 4):
             self.employee_hash[parsed[3]].append(Employee(*parsed))
         else:
@@ -52,12 +47,8 @@ class Hierarchy:
                 for emp in new_nodes:
                     stack.append((level + 1, emp))
 
-        # print("run")
-        # hierarchy = Hierarchy()
-        # hierarchy.process_hierarchy()
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
         path = argv[1]
     except IndexError:

@@ -1,6 +1,6 @@
 import unittest
 from io import StringIO
-from HierarchySolve import *
+from HierarchySolve import Hierarchy, Employee
 
 
 class TestStringMethods(unittest.TestCase):
@@ -42,6 +42,6 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(out.getvalue(), expected)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("run")
     unittest.main()
