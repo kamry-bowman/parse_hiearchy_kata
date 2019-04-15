@@ -37,11 +37,9 @@ class TestStringMethods(unittest.TestCase):
                 ]
 
         expected = "\n".join(hier)
-        print(expected)
-        print(out.getvalue())
         self.assertEqual(out.getvalue(), expected)
+        out.close()
 
 
 if __name__ == "__main__":
-    print("run")
     unittest.main()

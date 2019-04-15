@@ -13,7 +13,6 @@ class Hierarchy:
         self.root = None
 
     def process_hierarchy(self):
-        print("hello")
         with open(self.file) as f:
             for line in f:
                 self.parse_employee(line)
